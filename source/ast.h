@@ -26,8 +26,8 @@ struct binaryNode : astNode {
     unique_ptr<astNode> left;
     unique_ptr<astNode> right;
 
-    binaryNode(tokenType op, std::unique_ptr<astNode> left,
-               std::unique_ptr<astNode> right)
-        : op(op), left(std::move(left)), right(std::move(right)) {}
+    binaryNode(tokenType op, unique_ptr<astNode> left,
+               unique_ptr<astNode> right)
+        : op(op), left(move(left)), right(move(right)) {}
 };
 #endif
