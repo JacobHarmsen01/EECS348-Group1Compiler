@@ -18,7 +18,7 @@ This project is about creating a simple compiler for C++ for EECS 348. It focuse
 
 ## Roadmap
 - [x] Project plan
-- [ ] Software requirements
+- [x] Software requirements
 - [ ] Architecture design
 - [ ] Test cases
 - [ ] Use cases
