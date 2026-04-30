@@ -19,7 +19,7 @@ struct unaryNode : astNode {
     unique_ptr<astNode> operand;
 
     unaryNode(tokenType op, unique_ptr<astNode> operand) :
-            op(op), operand(move(operand)) {}
+            op(op), operand(std::move(operand)) {}
 };
 struct binaryNode : astNode {
     tokenType op;
