@@ -1,3 +1,27 @@
+/*
+******** exprparser ********
+A C++ Mathematical Arithmetic compiler
+
+exprparser takes a mathematical expression and calculates the answer using proper order of operations.
+It features a color CLI and returns a graphical token classifier and Abstract Syntax Tree that makes up the provided expression.
+
+--- Authors ---
+Quinn Sells - Designer & Programmer
+Jacob Harmsen - Project Manager
+Hudson Rupp - Implementer
+Logan Sigg - Reviewer
+Lauren Wesely - Integrator
+Collin Rawson - Tester
+
+--- University ---
+The University of Kansas School of Engineering
+EECS 348 - Software Engineering
+Professor Hossein Saedian
+
+*** lexer.cpp ***
+
+*/
+
 #include "lexer.h"
 
 using namespace std;
@@ -6,11 +30,11 @@ using tt = tokenType;
 
 L::Lexer(const string& input) : input(input), pos(0) {}
 
-char L::current() const {
+char L::current() const { // Current character position
     if (pos >= input.size()) return '\0';
     return input[pos];
 }
-char L::peek() const {
+char L::peek() const { // Peek at next character position
     if (pos + 1 >= input.size()) return '\0';
     return input[pos + 1];
 }

@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../source/lexer.h"
-#include "../source/parser.h"
-#include "../source/evaluator.h"
+#include "../src/lexer.h"
+#include "../src/parser.h"
+#include "../src/evaluator.h"
 
 using namespace std;
 
