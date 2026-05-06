@@ -28,7 +28,7 @@ token Lexer::readNumber() {
         advance();
         while (isdigit(current())) advance();
     }
-    return token(tokenType::number, input.substr(start, pos - start), start);
+    return token(tt::number, input.substr(start, pos - start), start);
 }
 vector<token> L::tokenize() {
     vector<token> tokens;

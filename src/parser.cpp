@@ -13,7 +13,7 @@ token P::current() const {
 token P::consume() {
     return tokens[pos++];
 }
-token P::expect(tokenType type) {
+token P::expect(tt type) {
     if (current().type != type)
         throw runtime_error("Expected '" + string(tokenTypeName(type)) +
                             "' but got '" + string(tokenTypeName(current().type)) +

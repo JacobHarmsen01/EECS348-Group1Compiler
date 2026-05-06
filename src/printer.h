@@ -31,6 +31,7 @@ void printTokens(const vector<token>& tokens);
 void printDivider(char c = '-', int width = 60);
 void printHeader();
 void printResult(double val, const string& msg);
+void printError(const string& msg);
 
 #endif
 
