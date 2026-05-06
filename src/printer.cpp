@@ -76,6 +76,7 @@ static string tokenColor(tokenType t) {
         case tt::lParen:
         case tt::rParen:    return Colors::Purple;
         case tt::end:       
+        default:            return Colors::White;
     }
     return Colors::White;
 }

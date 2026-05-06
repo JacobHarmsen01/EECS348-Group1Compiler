@@ -1,5 +1,5 @@
 CXX      = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -Wno-unqualified-std-cast-call
+CXXFLAGS = -std=c++17 -Wall -Wextra
 TARGET   = exprparser
 SRCS     = src/lexer.cpp src/parser.cpp src/evaluator.cpp src/printer.cpp src/main.cpp
 OBJS     = $(SRCS:.cpp=.o)
