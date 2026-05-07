@@ -96,7 +96,7 @@ void printTree(const astNode* node, const string& prefix, bool isLast) {
     if (!node) return;
 
     string connector =      isLast ? "\u2514\u2500\u2500 " : "\u251C\u2500\u2500 ";
-    string childPrefix =    prefix + (isLast ? "   ": "/u2502  ");
+    string childPrefix =    prefix + (isLast ? "   ": "\u2502  ");
     string color =          nodeColor(node);
     string label =          nodeLabel(node);
     string type =           nodeType(node);

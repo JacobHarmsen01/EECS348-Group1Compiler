@@ -92,7 +92,7 @@ unique_ptr<astNode> P::parseTerm() {
             current().type == tt::slash ||
             current().type == tt::percent) {
         token op = consume();
-        auto right = parseTerm();
+        auto right = parsePower();
         left = make_unique<binaryNode>(op.type, std::move(left), std::move(right));
     }
     return left;
