@@ -1,0 +1,173 @@
+﻿Test Case ID ,Description ,Input Data ,Expected Results ,Actual Results ,Pass/Fail
+TC01 ,Simple Addition ,3 + 4 ,7 ,7,Pass
+TC02 ,Subtraction with Parentheses ,8 - (5 - 2) ,5 ,5,Pass
+TC03 ,Multiplication and Division ,10 * 2 / 5 ,4 ,4,Pass
+TC04 ,Exponentiation ,2 ** 3 ,8 ,8,Pass
+TC05 ,Mixed Operators ,4 * (3 + 2) % 7 - 1 ,5 ,5,Pass
+TC06 ,Complex Addition with Extraneous Parenthesis ,(((2 + 3))) + (((1 + 2))) ,8 ,8,Pass
+TC07 ,Mixed Operators with Extraneous Parenthesis ,((5 * 2) - ((3 / 1) + ((4 % 3)))) ,6 ,6,Pass
+TC08 ,Nested Parentheses with Exponents ,(((2 ** (1 + 1)) + ((3 - 1) ** 2)) / ((4 / 2) % 3)) ,4 ,4,Pass
+TC09 ,Combination of Extraneous and Necessary Parentheses ,(((((5 - 3))) * (((2 + 1))) + ((2 * 3)))) ,12 ,12,Pass
+TC10 ,Extraneous Parentheses with Division ,((9 + 6)) / ((3 * 1) / (((2 + 2))) - 1) ,-60 ,-60,Pass
+TC11 ,Combining Unary Operators with Arithmetic Operations ,+(-2) * (-3) - ((-4) / (+5)) ,6.8 ,6.80000000,Pass
+TC12 ,Unary Negation and Addition in Parentheses ,-(+1) + (+2) ,1 ,1,Pass
+TC13 ,Negation and Addition with Negated Parentheses ,-(-(-3)) + (-4) + (5) ,-2 ,-2,Pass
+TC14 ,Unary Negation and Exponentiation ,+2 ** (-3) ,0.125 ,0.12500000,Pass
+TC15 ,Combining Unary Operators with Parentheses ,-(2) * (3) - (-4) / (-5) ,-6.8 ,-6.80000000,Pass
+TC16 ,Unmatched Parentheses ,2 * (4 + 3 - 1 ,ERR ,ERR,Pass
+TC17 ,Operators Without Operands ,* 5 + 2 ,ERR ,ERR,Pass
+TC18 ,Incorrect Operator Usage ,4 / 0 ,ERR ,ERR,Pass
+TC19 ,Missing Operator ,5 (2 + 3) ,ERR ,ERR,Pass
+TC20 ,Invalid Characters ,7 & 3 ,ERR ,ERR,Pass
+TC21 ,Mismatched Parentheses ,(((3 + 4) - 2) + (1) ,ERR ,ERR,Pass
+TC22 ,Invalid Operator Usage ,((5 + 2) / (3 * 0)) ,ERR ,ERR,Pass
+TC23 ,Invalid Operator Sequence ,((2 -) 1 + 3) ,ERR ,ERR,Pass
+TC24 ,Missing Operand ,((4 * 2) + ( - )) ,ERR ,ERR,Pass
+TC25 ,Invalid Characters ,((7 * 3) ^ 2) ,ERR ,ERR,Pass
+TC26 ,Verify Associativity of Exponentiation Operator ,2 ** 3 ** 2 ,512 ,512,Pass
+TC27 ,Modulo Operator with Negated Operand ,-14 % 3 ,-2 ,-2,Pass
+TC28 ,Multiple Stacked Unary Operators ,-(-(5)) + (+(-2)) ,3 ,3,Pass
+TC29 ,Consecutive Operators without Operands ,5 + * 3 ,ERR ,ERR,Pass
+TC30 ,Invalid Second Modulo Operand ,10 % 0 ,ERR ,ERR,Pass
+TC31 ,Associativity of Division Operator ,100 / 10 / 2 ,5 ,5,Pass
+TC32 ,Associativity when Mixing Multiplication and Modulo ,10 * 5 % 3 ,2 ,2,Pass
+TC33 ,Stacked Unary Operators and Exponentiation ,-(-2 ** 3) ,8 ,8,Pass
+TC34 ,Extraneous Parentheses Resulting in Skewed Tree ,(1 + (2 + (3 + (4 + 5)))) ,15 ,15,Pass
+TC35 ,Simple Operations with Excessive Whitespace ,2               +             3       *         4 ,14 ,14,Pass
+TC36 ,Simple Operations with No Whitespace ,2+3*4 ,14 ,14,Pass
+TC37 ,Parentheses with Excessive Whitespace ,(   2 + 3    ) * 4 ,20 ,20,Pass
+TC38 ,Whitespace Between Unary Operators ,-     5 ,-5 ,-5,Pass
+TC39 ,Empty Parentheses ,() ,ERR ,ERR,Pass
+TC40 ,Missing Operator Between Parentheses and Operand ,(3 + 4) 5 ,ERR ,ERR,Pass
+TC41 ,Invalid Operands ,a + b ,ERR ,ERR,Pass
+TC42 ,Simple Addition ,5 + 3 ,8 ,8,Pass
+TC43 ,Simple Subtraction ,10 - 4 ,6 ,6,Pass
+TC44 ,Simple Multiplication ,6 * 7 ,42 ,42,Pass
+TC45 ,Simple Division ,20 / 4 ,5 ,5,Pass
+TC46 ,Remainder Check ,10 % 3 ,1 ,1,Pass
+TC47 ,Exponent ,3 ** 4 ,81 ,81,Pass
+TC48 ,Parenthesis with Exponents ,(2 + 3) * 4 ,20 ,20,Pass
+TC49 ,Division and Multiplication ,100 / (2 * 5) ,10 ,10,Pass
+TC50 ,Double Exponents ,2 ** 3 ** 2 ,512 ,512,Pass
+TC51 ,Simple Addition with prefix ,+5 + 3 ,8 ,8,Pass
+TC52 ,Simple Addition with Negative ,-4 + 10 ,6 ,6,Pass
+TC53 ,Addition Mixed with Parenthesis ,-(3 + 2) ,-5 ,-5,Pass
+TC54 ,Testing Parentheses Awareness ,(((7))) ,7 ,7,Pass
+TC55 ,Modulo and Addition ,15 % 4 + 1 ,4 ,4,Pass
+TC56 ,Addition and Multiplication ,2 + 3 * 4 - 1 ,13 ,13,Pass
+TC57 ,More With Multiplication and Addition but added Parentheses ,(8 - 3) * (2 + 4) ,30 ,30,Pass
+TC58 ,Double Modulo ,100 % 7 % 3 ,2 ,2,Pass
+TC59 ,Another Parentheses Multiplication check ,((2 + 3)) * ((4 - 1)) ,15 ,15,Pass
+TC60 ,Testing sign Prefix ,+(-5 + 15) * 2 ,20 ,20,Pass
+TC61 ,Math inside Exponents ,2 ** 2 + 3 * (10 - 4) % 5 ,7 ,7,Pass
+TC62 ,Division by zero error ,5 / 0 ,ERR ,ERR,Pass
+TC63 ,Missing left operand ,* 3 + 2 ,ERR ,ERR,Pass
+TC64 ,Unmatched opening Parenthesis ,(4 + 5 ,ERR ,ERR,Pass
+TC65 ,Unmatched closing Parenthesis ,7 + 3) ,ERR ,ERR,Pass
+TC66 ,Invalid character/operator ,4 @ 2 ,ERR ,ERR,Pass
+TC67 ,Invalid operator sequence ,6 + * 2 ,ERR ,ERR,Pass
+TC68 ,Missing operator between operands ,5 3 + 2 ,ERR ,ERR,Pass
+TC69 ,Division by zero error ,(10 / (2 - 2)) ,ERR ,ERR,Pass
+TC70 ,Invalid character ,8 + $ 3 ,ERR ,ERR,Pass
+TC71 ,Missing right operand ,((3 + 4) * (2 - )) ,ERR ,ERR,Pass
+TC72 ,Invalid operator sequence ,3 ** / 2 ,ERR ,ERR,Pass
+TC73 ,Decimal Addition ,1.5 + 2.5 ,4 ,4,Pass
+TC74 ,Decimal Subtraction ,5.75 - 2.25 ,3.5 ,3.50000000,Pass
+TC75 ,Decimal Multiplication ,2.5 * 4.0 ,10 ,10,Pass
+TC76 ,Decimal Division ,7.5 / 2.5 ,3 ,3,Pass
+TC77 ,Decimal Exponentiation ,2.0 ** 3.0 ,8 ,8,Pass
+TC78 ,Decimal Modulo ,5.5 % 2.0 ,1.5 ,1.50000000,Pass
+TC79 ,Mixed Integer and Decimal ,3 + 1.5 * 2 ,6 ,6,Pass
+TC80 ,Decimal in Parentheses ,(1.5 + 2.5) * 2 ,8 ,8,Pass
+TC81 ,Chained Decimal Operations ,1.1 + 2.2 + 3.3 + 4.4 ,11 ,11,Pass
+TC82 ,Decimal Unary Negation ,-3.14 * 2 ,-6.28 ,-6.28000000,Pass
+TC83 ,Decimal Unary Plus ,+3.14 + 0 ,3.14 ,3.14000000,Pass
+TC84 ,Decimal Division Resulting in Decimal ,1 / 4 ,0.25 ,0.25000000,Pass
+TC85 ,Decimal Exponent with Integer Base ,4 ** 0.5 ,2 ,2,Pass
+TC86 ,Zero Exponent ,100 ** 0 ,1 ,1,Pass
+TC87 ,One Exponent ,999 ** 1 ,999 ,999,Pass
+TC88 ,Zero Base ,0 ** 5 ,0 ,0,Pass
+TC89 ,Zero Base Zero Exponent ,0 ** 0 ,1 ,1,Pass
+TC90 ,Negative Base Even Exponent ,(-2) ** 2 ,4 ,4,Pass
+TC91 ,Negative Base Odd Exponent ,(-2) ** 3 ,-8 ,-8,Pass
+TC92 ,Negative Exponent ,2 ** -1 ,0.5 ,0.50000000,Pass
+TC93 ,Negative Exponent with Parentheses ,3 ** (-2) ,0.111111 ,0.11111111,Pass
+TC94 ,Fractional Exponent ,27 ** (1 / 3) ,3 ,3,Pass
+TC95 ,Large Integer Exponent ,2 ** 10 ,1024 ,1024,Pass
+TC96 ,Chained Exponentiation Right-Associativity ,4 ** 3 ** 2 ,262144 ,262144,Pass
+TC97 ,Exponent of Exponent Result ,(2 ** 3) ** 2 ,64 ,64,Pass
+TC98 ,Addition Identity ,0 + 42 ,42 ,42,Pass
+TC99 ,Subtraction Identity ,42 - 0 ,42 ,42,Pass
+TC100 ,Multiplication Identity ,1 * 99 ,99 ,99,Pass
+TC101 ,Division Identity ,77 / 1 ,77 ,77,Pass
+TC102 ,Multiply by Zero ,999 * 0 ,0 ,0,Pass
+TC103 ,Modulo by One ,17 % 1 ,0 ,0,Pass
+TC104 ,Modulo Equal Operands ,7 % 7 ,0 ,0,Pass
+TC105 ,Modulo Less Than Divisor ,3 % 10 ,3 ,3,Pass
+TC106 ,Double Unary Plus ,+ +5 ,5 ,5,Pass
+TC107 ,Triple Unary Negation ,- - -7 ,-7 ,-7,Pass
+TC108 ,Quadruple Unary Negation ,- - - -3 ,3 ,3,Pass
+TC109 ,Unary Plus on Expression ,+(3 * 4) ,12 ,12,Pass
+TC110 ,Unary Minus on Nested Expression ,-(2 ** 3 + 1) ,-9 ,-9,Pass
+TC111 ,Unary on Exponentiation Result ,-2 ** 2 ,4 ,4,Pass
+TC112 ,Unary Negation of Zero ,-0 ,0 ,0,Pass
+TC113 ,Deeply Nested Parentheses ,((((((1 + 1)))))) ,2 ,2,Pass
+TC114 ,Deeply Nested Mixed ,((((2 * 3) + 4) - 1) % 9) ,0 ,0,Pass
+TC115 ,Left-Skewed Tree ,1 + 2 + 3 + 4 + 5 ,15 ,15,Pass
+TC116 ,Right-Skewed Tree via Parens ,1 + (2 + (3 + (4 + 5))) ,15 ,15,Pass
+TC117 ,Alternating Operators ,10 - 2 + 3 - 4 + 5 ,12 ,12,Pass
+TC118 ,Long Multiplication Chain ,2 * 3 * 4 * 5 ,120 ,120,Pass
+TC119 ,Long Division Chain ,1000 / 10 / 10 / 10 ,1 ,1,Pass
+TC120 ,Mixed Precedence Chain ,2 + 3 * 4 - 8 / 2 + 1 ,11 ,11,Pass
+TC121 ,Operator Precedence: Exponent over Multiply ,2 * 3 ** 2 ,18 ,18,Pass
+TC122 ,Operator Precedence: Multiply over Add ,2 + 3 * 4 + 5 ,19 ,19,Pass
+TC123 ,Operator Precedence: Unary over Exponent ,-2 ** 2 ,4 ,4,Pass
+TC124 ,Parentheses Override Precedence ,(2 + 3) ** 2 ,25 ,25,Pass
+TC125 ,Nested Parentheses Override ,((2 + 3) * (4 - 1)) ** 2 ,225 ,225,Pass
+TC126 ,Modulo Precedence over Addition ,10 + 7 % 3 ,11 ,11,Pass
+TC127 ,Modulo Precedence over Subtraction ,10 - 7 % 3 ,9 ,9,Pass
+TC128 ,Division Precedence over Addition ,10 + 8 / 4 ,12 ,12,Pass
+TC129 ,Complex Precedence ,2 ** 3 + 4 * 5 - 6 / 2 ,25 ,25,Pass
+TC130 ,Full Operator Precedence Test ,1 + 2 * 3 ** 2 - 8 / 4 % 3 ,17 ,17,Pass
+TC131 ,Single Digit ,7 ,7 ,7,Pass
+TC132 ,Single Zero ,0 ,0 ,0,Pass
+TC133 ,Single Negative Number ,-1 ,-1 ,-1,Pass
+TC134 ,Single Decimal ,3.14 ,3.14 ,3.14000000,Pass
+TC135 ,Single Positive Unary ,+9 ,9 ,9,Pass
+TC136 ,Large Number ,999999 + 1 ,1000000 ,1000000,Pass
+TC137 ,Subtraction Resulting in Negative ,3 - 10 ,-7 ,-7,Pass
+TC138 ,Negative Times Negative ,(-5) * (-5) ,25 ,25,Pass
+TC139 ,Negative Divided by Positive ,(-9) / 3 ,-3 ,-3,Pass
+TC140 ,Positive Divided by Negative ,9 / (-3) ,-3 ,-3,Pass
+TC141 ,Double Slash ,10 // 2 ,ERR ,ERR,Pass
+TC142 ,Hash Character ,5 # 3 ,ERR ,ERR,Pass
+TC143 ,Exclamation Character ,5! ,ERR ,ERR,Pass
+TC144 ,Tilde Character ,~5 ,ERR ,ERR,Pass
+TC145 ,Equals Sign ,5 = 3 ,ERR ,ERR,Pass
+TC146 ,Less Than Sign ,5 < 3 ,ERR ,ERR,Pass
+TC147 ,Greater Than Sign ,5 > 3 ,ERR ,ERR,Pass
+TC148 ,Pipe Character ,5 | 3 ,ERR ,ERR,Pass
+TC149 ,Ampersand Character ,5 & 3 ,ERR ,ERR,Pass
+TC150 ,Letter in Expression ,5 + x ,ERR ,ERR,Pass
+TC151 ,Word in Expression ,five + 3 ,ERR ,ERR,Pass
+TC152 ,Operator Only ,+ ,ERR ,ERR,Pass
+TC153 ,Double Operator Only ,** ,ERR ,ERR,Pass
+TC154 ,Only Parentheses ,((())),ERR ,ERR,Pass
+TC155 ,Trailing Operator ,5 + 3 + ,ERR ,ERR,Pass
+TC156 ,Leading and Trailing Operator ,+ 5 + 3 * ,ERR ,ERR,Pass
+TC157 ,Two Operators Adjacent ,5 ++ 3 ,8 ,8,Pass
+TC158 ,Misplaced Decimal ,5. + 3 ,ERR ,ERR,Pass
+TC159 ,Double Decimal in Number ,3..14 + 1 ,ERR ,ERR,Pass
+TC160 ,Decimal Only ,. + 1 ,ERR ,ERR,Pass
+TC161 ,Whitespace Only ,     ,ERR ,ERR,Pass
+TC162 ,Tab Characters ,3	+	4 ,7 ,7,Pass
+TC163 ,Mixed Tabs and Spaces ,3  	 + 	 4 ,7 ,7,Pass
+TC164 ,Newline in Expression ,3 + 4 ,7 ,7,Pass
+TC165 ,No Whitespace Complex ,((2+3)*(4-1))**2 ,225 ,225,Pass
+TC166 ,No Whitespace with Unary ,-(2+3)*4 ,-20 ,-20,Pass
+TC167 ,No Whitespace Exponent ,2**10 ,1024 ,1024,Pass
+TC168 ,No Whitespace Modulo ,10%3 ,1 ,1,Pass
+TC169 ,No Whitespace Negative ,(-3)*(-4) ,12 ,12,Pass
+TC170 ,Subtraction Left Associativity ,10 - 5 - 3 ,2 ,2,Pass
+TC171 ,Division Left Associativity ,24 / 6 / 2 ,2 ,2,Pass
+TC172 ,Modulo Left Associativity ,20 % 7 % 3 ,0 ,0,Pass

@@ -52,6 +52,6 @@ struct binaryNode : astNode {
 
     binaryNode(tokenType op, unique_ptr<astNode> left,
                unique_ptr<astNode> right)
-        : op(op), left(move(left)), right(move(right)) {}
+        : op(op), left(std::move(left)), right(std::move(right)) {}
 };
 #endif

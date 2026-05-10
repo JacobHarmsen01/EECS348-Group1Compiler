@@ -46,7 +46,7 @@ struct token {
     size_t position;
 
     token(tokenType type, string value, size_t position) :
-    type(type), value(move(value)), position(position) {}
+    type(type), value(std::move(value)), position(position) {}
 };
 inline const char* tokenTypeName(tokenType type) {
     using t = tokenType;
