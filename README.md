@@ -3,6 +3,7 @@
 This project is about creating a simple compiler for C++ for EECS 348. It focuses on an Arithmetic Expression Evaluator in C++ using the Unified Process for Education.
 ## Getting Started
 - C++
+- make
 - Bash Shell
 - Git
 ## Installation
@@ -13,13 +14,24 @@ This project is about creating a simple compiler for C++ for EECS 348. It focuse
 
 ### Building
 
-**Windows (PowerShell) — no `make` required:**
-```powershell
-g++ -o evaluator src/main.cpp src/lexer.cpp src/parser.cpp src/evaluator.cpp src/printer.cpp
-```
+`make` is required to build this project.
 
 **Linux/macOS:**
 ```bash
+make
+```
+
+**Windows (PowerShell):**
+
+`make` must be installed first.
+pacman -S make
+```
+Then add it to your PATH if PowerShell cannot find it:
+```powershell
+$env:PATH += ";C:\msys64\usr\bin"
+```
+Then build:
+```powershell
 make
 ```
 
@@ -39,14 +51,14 @@ make
 
 ### Supported Operators
 
-| Operator | Description        | Associativity |
-|----------|--------------------|---------------|
-| `+`      | Addition           | Left-to-right |
-| `-`      | Subtraction        | Left-to-right |
-| `*`      | Multiplication     | Left-to-right |
-| `/`      | Division           | Left-to-right |
-| `%`      | Modulo             | Left-to-right |
-| `**`     | Exponentiation     | Right-to-left |
+| Operator | Description    | Associativity |
+|----------|----------------|---------------|
+| `+`      | Addition       | Left-to-right |
+| `-`      | Subtraction    | Left-to-right |
+| `*`      | Multiplication | Left-to-right |
+| `/`      | Division       | Left-to-right |
+| `%`      | Modulo         | Left-to-right |
+| `**`     | Exponentiation | Right-to-left |
 
 Unary `+` and `-` are also supported (e.g. `-3`, `+2`).
 
@@ -70,8 +82,6 @@ result: -(-(-3)) + (-4) + (+5) = -2
 ```
 
 ### Error Handling
-
-The evaluator will report a descriptive error instead of crashing for invalid expressions:
 
 ```
 > 4 / 0
@@ -99,11 +109,11 @@ Type `exit` to quit the program.
 ## Authors and Contributors
 Quinn Sells, Hudson Rupp, Logan Sigg, Lauren Wesely, Collin Rawson, Jacob Harmsen
 ## Contacts
-Quinn Sells - quinnsells@ku.edu  
-Hudson Rupp - hudson.rupp@ku.edu  
-Logan Sigg - l550s255@ku.edu  
-Lauren Wesely - wesely@ku.edu  
-Collin Rawson - collinrawson@ku.edu  
+Quinn Sells - quinnsells@ku.edu
+Hudson Rupp - hudson.rupp@ku.edu
+Logan Sigg - l550s255@ku.edu
+Lauren Wesely - wesely@ku.edu
+Collin Rawson - collinrawson@ku.edu
 Jacob Harmsen - j068h985@ku.edu
-## Liscense
+## License
 Distributed under the Unlicense License. See LICENSE.txt for more information.
