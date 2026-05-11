@@ -20,9 +20,9 @@ This project is about creating a simple compiler for C++ for EECS 348. It focuse
 - [x] Project plan
 - [x] Software requirements
 - [x] Architecture design
-- [ ] Test cases
-- [ ] Use cases
-- [ ] Bug fixes
+- [x] Test cases
+- [x] Use cases
+- [x] Bug fixes
 
 ## Authors and Contributors
 Quinn Sells, Hudson Rupp, Logan Sigg, Lauren Wesely, Collin Rawson, Jacob Harmsen
